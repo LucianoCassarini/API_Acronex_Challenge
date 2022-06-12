@@ -63,10 +63,12 @@ class MaquinaView(View):
     def dispatch(self, request, *args, **kwargs):  #*Este metodo se ejecuta cuando hacemos una petición
         return super().dispatch(request, *args, **kwargs)
     
-    #!----------  Realizar búsquedas de máquinas ------------
+    #*----------  Realizar búsquedas de máquinas ------------
     def get(self, request):
         print(request)
-        if('nombre' in request.GET):
+        if('nombre' in request.GET and 'clase' in request.GET):
+            maquinaria = Maquina.objects.filter(nombre= request.GET['nombre']) | Maquina.objects.filter(clase= request.GET['clase'])
+        elif('nombre' in request.GET):
             maquinaria = Maquina.objects.filter(nombre= request.GET['nombre']) #Buscar por nombre
         elif('clase' in request.GET):
             maquinaria = Maquina.objects.filter(clase= request.GET['clase'])
@@ -151,5 +153,4 @@ class MaquinaDetailView(View):
 
 
 
-# if __name__ == '__main__':
-#     ultimoPuntoConocido(1)
+#if __name__ == '__main__':
