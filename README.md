@@ -1,7 +1,11 @@
-
 # API_Acronex_Challenge
 
 Esta API de máquinas agrícolas fue desarrollada con Django y PostgreSQL.
+
+Además se usó el servicio de hosting de Heroku como cloud publica. 
+
+Se puede acceder a la api a través del siguiente link:
+	- ```https://challengeapiacronex.herokuapp.com/api/maquinaria/```
 
 ### Dependencias:
 
@@ -42,6 +46,10 @@ Por ultimo, para tener acceso al panel de Administrador proporcionado por django
 - ``` python manage.py createsuperuser```
 
 ## Referencias de la API local
+Se puede acceder a los siguientes endpoints desde:
+una cloud pública: ```https://challengeapiacronex.herokuapp.com/```
+o 
+de forma local: ```http://127.0.0.1:8000/```
 
 | Tipo |  Referencia  | Descripción                |
 | :-------- | :------- | :-------------------------|
@@ -82,5 +90,4 @@ Por ultimo, para tener acceso al panel de Administrador proporcionado por django
     "dado_de_baja": true
  }
 ```
-
 
