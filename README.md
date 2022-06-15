@@ -51,6 +51,36 @@ Por ultimo, para tener acceso al panel de Administrador proporcionado por django
 | `GET` | `/api/maquinaria/?clase=<clase>` | Consultar una máquina existente por clase |
 | `GET` | `/api/maquinaria/?nombre=<nombre>&clase=<clase>` | Consultar una máquina existente por nombre o clase |
 | `POST` | `/api/maquinaria/` | Da de alta una nueva maquina |
-| `PUT` | `/api/maquinaria/<id>` | Actualiza una maquina existente |
-| `PUT` | `/api/maquinaria/darBaja/<id>` | Da de baja una maquina existente sin eliminarla|
+| `PUT` | `/api/maquinaria/<id>/` | Actualiza una maquina existente |
+| `PUT` | `/api/maquinaria/darDeBaja/<id>/` | Da de baja una maquina existente sin eliminarla|
 | `DELETE` | `/api/maquinaria/<id>` | Elimina una maquina existente |
+
+### Para dar de alta una nueva máquina la API necesita recibir un Json con el siguiente formato:
+```
+{
+    "nombre": "nombreMaquina",
+    "clase": "claseMaquina",
+    "empresa": "nombreEmpresa"
+}
+```
+
+### Para actualizar una máquina la API necesita recibir un Json con el siguiente formato:
+```
+{
+    "nombre": "nombreMaquina",
+    "clase": "claseMaquina",
+    "empresa": "nombreEmpresa"
+}
+```
+
+### Para dar de baja una máquina la API necesita recibir un Json con el siguiente formato:
+```
+{
+    "nombre": "nombreMaquina",
+    "clase": "claseMaquina",
+    "empresa": "nombreEmpresa",
+    "dado_de_baja": true
+ }
+```
+
+
