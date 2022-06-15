@@ -6,6 +6,7 @@ Además se usó el servicio de hosting de Heroku como cloud publica.
 
 Se puede acceder a la api a través del siguiente link:
 	- ```https://challengeapiacronex.herokuapp.com/api/maquinaria/```
+	
 
 ### Dependencias:
 
@@ -53,15 +54,16 @@ de forma local: ```http://127.0.0.1:8000/```
 
 | Tipo |  Referencia  | Descripción                |
 | :-------- | :------- | :-------------------------|
-| `GET` | `/api/maquinaria/` | Consulta todas las maquinas existentes|
+| `GET` | `/api/maquinaria/` | Consulta todas las máquinas existentes|
 | `GET` | `/api/maquinaria/<id>` | Consulta una máquina existente por por ID|
-| `GET` | `/api/maquinaria/?nombre=<nombre>` | Consultar una máquina existente por nombre |
-| `GET` | `/api/maquinaria/?clase=<clase>` | Consultar una máquina existente por clase |
-| `GET` | `/api/maquinaria/?nombre=<nombre>&clase=<clase>` | Consultar una máquina existente por nombre o clase |
+| `GET` | `/api/maquinaria/?nombre=<nombre>` | Consulta una máquina existente por nombre |
+| `GET` | `/api/maquinaria/?clase=<clase>` | Consulta una máquina existente por clase |
+| `GET` | `/api/maquinaria/?nombre=<nombre>&clase=<clase>` | Consulta una máquina existente por nombre o clase |
+| `GET` | `/api/maquinaria/ultimoPunto/<id>` | Consulta el último punto de una máquina existente|
 | `POST` | `/api/maquinaria/` | Da de alta una nueva maquina |
-| `PUT` | `/api/maquinaria/<id>/` | Actualiza una maquina existente |
-| `PUT` | `/api/maquinaria/darDeBaja/<id>/` | Da de baja una maquina existente sin eliminarla|
-| `DELETE` | `/api/maquinaria/<id>` | Elimina una maquina existente |
+| `PUT` | `/api/maquinaria/<id>/` | Actualiza una máquina existente |
+| `PUT` | `/api/maquinaria/darDeBaja/<id>/` | Da de baja una máquina existente sin eliminarla|
+| `DELETE` | `/api/maquinaria/<id>` | Elimina una máquina existente |
 
 ### Para dar de alta una nueva máquina la API necesita recibir un Json con el siguiente formato:
 ```
